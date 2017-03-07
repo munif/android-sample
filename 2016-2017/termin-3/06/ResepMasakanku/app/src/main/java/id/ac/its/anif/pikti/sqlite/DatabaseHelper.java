@@ -4,17 +4,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteStatement;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.sql.SQLInput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -240,5 +236,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         int result = db.delete("bookmark", "resep_id = ?", new String[]{ String.valueOf(resepId)} );
         return result;
+    }
+
+    public List<Kategori> getAllKategori() {
+        List<Kategori> kategoriList = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM kategori";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        if(c.moveToFirst()) {
+            do {
+                Kategori kategori = new Kategori();
+                kategori.setKategoriId(c.getInt(0));
+                kategori.setKategoriNama(c.getString(1));
+                kategori.setKategoriKeterangan(c.getString(2));
+                kategoriList.add(kategori);
+            } while (c.moveToNext());
+        }
+        c.close();
+
+        return kategoriList;
+    }
+
+    public long addResep(Resep resep) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("resep_nama", resep.getResepNama());
+        values.put("resep_intro", resep.getResepIntro());
+        values.put("resep_bahan", resep.getResepBahan());
+        values.put("resep_instruksi", resep.getResepInstruksi());
+        values.put("resep_gambar", resep.getResepGambar());
+        values.put("kategori_id", resep.getKategoriId());
+
+        long resepId = db.insert("resep", null, values);
+        return resepId;
     }
 }

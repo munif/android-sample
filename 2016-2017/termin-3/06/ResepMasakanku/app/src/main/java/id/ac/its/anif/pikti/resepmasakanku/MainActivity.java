@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
         // Inisialisasi basis data
         db = new DatabaseHelper(getApplicationContext());
         try {
@@ -168,6 +166,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_favorit) {
             resepList = db.getAllResepFavorit();
             resepAdapter.swap(resepList);
+        } else if (id == R.id.nav_tambah_resep) {
+            Intent intent = new Intent(getApplicationContext(), TambahResepActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

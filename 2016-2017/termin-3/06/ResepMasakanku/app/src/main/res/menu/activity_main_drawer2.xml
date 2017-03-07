@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item android:title="Semua Resep"
+            android:id="@+id/nav_semua_resep" />
+        <item android:title="Favorit"
+            android:id="@+id/nav_favorit" />
+        <item android:title="Tambah Resep"
+            android:id="@+id/nav_tambah_resep" />
+    </group>
+    <item android:title="Lauk">
+        <menu >
+            <item android:title="Ayam"
+                android:id="@+id/nav_ayam"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Bebek"
+                android:id="@+id/nav_bebek"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Cumi"
+                android:id="@+id/nav_cumi"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Daging"
+                android:id="@+id/nav_daging"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Ikan"
+                android:id="@+id/nav_ikan"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Jamur"
+                android:id="@+id/nav_jamur"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Tahu"
+                android:id="@+id/nav_tahu"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Tempe"
+                android:id="@+id/nav_tempe"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Telur"
+                android:id="@+id/nav_telur"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Udang"
+                android:id="@+id/nav_udang"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Kambing"
+                android:id="@+id/nav_kambing"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+            <item android:title="Sambal"
+                android:id="@+id/nav_sambal"
+                android:icon="@drawable/ic_local_dining_black_24dp" />
+
+        </menu>
+    </item>
+    <item android:title="Sayur dan Kuah" >
+        <menu >
+            <item android:title="Sayur"
+                android:id="@+id/nav_sayur"
+                android:icon="@drawable/ic_local_florist_black_24dp" />
+            <item android:title="Soto"
+                android:id="@+id/nav_soto"
+                android:icon="@drawable/ic_local_florist_black_24dp" />
+            <item android:title="Sup"
+                android:id="@+id/nav_sup"
+                android:icon="@drawable/ic_local_florist_black_24dp" />
+        </menu>
+    </item>
+    <item android:title="Nasi dan Mie" >
+        <menu >
+            <item android:title="Nasi"
+                android:id="@+id/nav_nasi"
+                android:icon="@drawable/ic_grain_black_24dp" />
+            <item android:title="Nasi Goreng"
+                android:id="@+id/nav_nasigoreng"
+                android:icon="@drawable/ic_grain_black_24dp" />
+            <item android:title="Mie"
+                android:id="@+id/nav_mie"
+                android:icon="@drawable/ic_grain_black_24dp" />
+        </menu>
+    </item>
+    <item android:title="Minuman" >
+        <menu >
+            <item android:title="Minuman Panas"
+                android:id="@+id/nav_minuman_panas"
+                android:icon="@drawable/ic_local_cafe_black_24dp" />
+            <item android:title="Minuman Dingin"
+                android:id="@+id/nav_minuman_dingin"
+                android:icon="@drawable/ic_local_cafe_black_24dp" />
+        </menu>
+    </item>
+    <item android:title="Kue dan Snack" >
+        <menu >
+            <item android:title="Kue Basah"
+                android:id="@+id/nav_kue_basah"
+                android:icon="@drawable/ic_spa_black_24dp" />
+            <item android:title="Kue Kering"
+                android:id="@+id/nav_kue_kering"
+                android:icon="@drawable/ic_spa_black_24dp" />
+            <item android:title="Pancake"
+                android:id="@+id/nav_pancake"
+                android:icon="@drawable/ic_spa_black_24dp" />
+            <item android:title="Puding"
+                android:id="@+id/nav_puding"
+                android:icon="@drawable/ic_spa_black_24dp" />
+            <item android:title="Buah"
+                android:id="@+id/nav_buah"
+                android:icon="@drawable/ic_spa_black_24dp" />
+        </menu>
+    </item>
+</menu>
